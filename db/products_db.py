@@ -1,8 +1,9 @@
-from sqlalchemy import create_engine, Column, Integer, Float, String, select
+from sqlalchemy import create_engine, Column, Integer, Float, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
+
 
 class Product(Base):
     __tablename__ = 'products'
@@ -11,6 +12,7 @@ class Product(Base):
     price = Column(Float)
     previous_price = Column(Float)
     image_url = Column(String)
+    cat = Column(Integer)
 
 
 class Database:
@@ -86,6 +88,7 @@ class Database:
             self.session.rollback()
             print(e)
             return False
+
 
 if __name__ == '__main__':
     db = Database("products.db")

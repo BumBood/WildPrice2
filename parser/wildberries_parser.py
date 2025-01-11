@@ -66,7 +66,8 @@ def get_url(art: int) -> str:
     else:
         basket = '13'
     host = f'//basket-{basket}.wbbasket.ru'
-    url = f'https:{host}/vol{str(vol)}/part{part}/{art_str}/'
+    url = (f'https:{host}/vol{str(vol)}/'
+           f'part{part}/{art_str}/')
 
     return url
 
