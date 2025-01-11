@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         <h5 class="card-title" align="center">{{ message }}</h5>
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+<div class="row">
+    {% for product_id in favourites %}
+    {% set product = get_info(product_id) %}
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+            <img src="{{ product.image_link }}" class="card-img-top" alt="{{ product.name }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text">ID: {{ product.id }}</p>
+                <p class="card-text">Цена: {{ product.salePriceU|int }} руб.</p>
+                <p class="card-text">Скидка: {{ ((product.priceU - product.salePriceU) / product.priceU *
+                    100)|round|int }}%</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <a href="https://www.wildberries.ru/catalog/{{ product.id }}/detail.aspx"
+                           class="btn btn-sm btn-outline-secondary">Подробнее</a>
+                        <a href="{{ url_for('delete_from_favourites', product_id=product.id) }}"
+                           class="btn btn-sm btn-outline-secondary">Удалить из избранного</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
