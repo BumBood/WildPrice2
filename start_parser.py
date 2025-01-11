@@ -2,7 +2,7 @@ from random import shuffle
 from threading import Thread
 
 from parser.wildberries_parser import category_parser
-from parser.config import clothing_list
+from parser.model import parsing_list
 
 def start_cat_list_parser(cat_list: list):
     while True:
