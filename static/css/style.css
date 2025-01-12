@@ -82,3 +82,59 @@ margin-top: 100px; /* Adjust spacing as needed */
 .login-container button[type="submit"]:hover {
   background-color: #45a049; /* Darker green */
 }
+
+/* Стиль для выезжающего окна */
+.category-panel {
+    position: fixed;
+    top: 0;
+    left: -33.33%; /* Начальное положение за экраном */
+    height: 100vh; /* Растяжение по высоте */
+    width: 33.33%; /* Треть экрана по ширине */
+    background-color: #f8f9fa;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transition: left 0.3s ease; /* Анимация выезда */
+    z-index: 1050;
+    padding: 20px;
+}
+
+/* Панель в открытом состоянии */
+.category-panel.open {
+    left: 0; /* Выезд влево */
+}
+
+/* Кнопка закрытия панели */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+}
+
+/* Список категорий */
+.category-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.category-item {
+    margin-bottom: 15px; /* Расстояние между категориями */
+}
+
+.category-link {
+    font-size: 20px; /* Увеличенный шрифт */
+    color: #007bff; /* Цвет ссылки */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.category-link:hover {
+    color: #00b7ff; /* Цвет при наведении */
+    text-decoration: underline;
+}
