@@ -128,7 +128,6 @@ def category_parser(name, shard, query):
                                     db.update_price(item_info.id, item_info.salePriceU)
                                     db.update_previous_price(item_info.id, latest_price)
 
-                                return 2
                             elif db.get_price_from_id(item_info.id):
                                 db.delete_product_by_id(item_info.id)
 
