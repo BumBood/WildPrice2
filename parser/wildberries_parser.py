@@ -83,6 +83,8 @@ def get_image_url(url: str) -> str:
 
 def category_parser(name, shard, query):
     print([name, shard, query], "начало работу")
+    if "subject" in query:
+        query = str(query).replace('subject', 'cat')
     try:
         page = 1
         while True:
