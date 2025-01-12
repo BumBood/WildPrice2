@@ -77,7 +77,7 @@ def get_sale(previous_price, new_price) -> float:
 
 
 def get_image_url(url: str) -> str:
-    image_url = url + "images/big/1.wbep"
+    image_url = url + "images/big/1.webp"
     return image_url
 
 
