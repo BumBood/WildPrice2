@@ -77,7 +77,7 @@ def get_sale(previous_price, new_price) -> float:
 
 
 def get_image_url(url: str) -> str:
-    image_url = url + "images/big/1.jpg"
+    image_url = url + "images/big/1.wbep"
     return image_url
 
 
@@ -116,8 +116,9 @@ def category_parser(name, shard, query):
                             sale = get_sale(latest_price, item_info.salePriceU)
 
                             if sale >= 0.1:
+
                                 check = db.add(item_info.id, item_info.name, item_info.salePriceU, latest_price,
-                                               get_image_url(get_url(item_info.id)))
+                                               get_image_url(get_url(item_info.id)), query, name)
 
                                 print("new sale")
 
