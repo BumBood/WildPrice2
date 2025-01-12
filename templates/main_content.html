@@ -2,7 +2,29 @@
 
 {% block content %}
 {% set products_db = Database("db/products.db") %}
-<div class="row">
+
+<!-- Кнопка для открытия панели -->
+<button id="categoryButton" class="btn btn-primary">Категории</button>
+
+<!-- Выезжающее окно -->
+<div id="categoryPanel" class="category-panel">
+    <button id="closePanelButton" class="close-button">&times;</button>
+    <div class="category-content">
+        <!-- Динамическая вставка категорий -->
+        <ul class="category-list">
+            {% for product in products_db.get_all_products() %}
+                {% if product.cat_name %}
+                <li class="category-item">
+                    <a href="/{{ product.cat }}" class="category-link">{{ product.cat_name }}</a>
+                </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+
+<div class="row mt-4">
     {% for product in products_db.get_all_products() %}
     <div class="col-md-4">
         <div class="card mb-4 shadow-sm">
@@ -26,5 +48,19 @@
     </div>
     {% endfor %}
 </div>
+
+<script>
+    const categoryButton = document.getElementById('categoryButton');
+    const categoryPanel = document.getElementById('categoryPanel');
+    const closePanelButton = document.getElementById('closePanelButton');
+
+    categoryButton.addEventListener('click', () => {
+        categoryPanel.classList.add('open');
+    });
+
+    closePanelButton.addEventListener('click', () => {
+        categoryPanel.classList.remove('open');
+    });
+</script>
 
 {% endblock %}
