@@ -100,6 +100,13 @@ def reqister():
         return redirect('/login')
     return render_template('register.html', title='Регистрация', form=form)
 
+
+@app.route('/cat=<int:category_id>')
+def show_category(category_id):
+    # Получаем все товары с указанной категорией    
+    return render_template('category.html', title='Wildprice', Database=Database, category_id=f'cat={category_id}')
+
+
 @app.route('/add_to_favourites/<int:product_id>', methods=['GET'])
 def add_to_favourites(product_id):
     if current_user.is_authenticated:
