@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set products_db = Database("db/products.db") %}
+
+<h1>Товары категории "{{ products_db.get_cat_name_from_id(category_id) }}" </h1>
+    
+<div class="row mt-4">
+    {% for product in products_db.get_all_products() %}
+    {% if product.cat == category_id %}
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="{{ product.image_url }}" class="card-img-top" alt="{{ product.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">ID: {{ product.id }}</p>
+                    <p class="card-text">Цена: {{ product.price|int }} руб.</p>
+                    <p class="card-text">Скидка: {{ ((product.previous_price - product.price) / product.previous_price *
+                        100)|round|int }}%</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a href="https://www.wildberries.ru/catalog/{{ product.id }}/detail.aspx"
+                            class="btn btn-sm btn-outline-secondary">Подробнее</a>
+                            <a href="{{ url_for('add_to_favourites', product_id=product.id) }}"
+                            class="btn btn-sm btn-outline-secondary">Добавить в избранное</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    {% endfor %}
+    
+</div>
+{% endblock %}
