@@ -117,7 +117,7 @@ def category_parser(name, shard, query):
                         if latest_price:
                             sale = get_sale(latest_price, item_info.salePriceU)
 
-                            if sale >= 0.1:
+                            if sale >= 0.2:
 
                                 check = db.add(item_info.id, item_info.name, item_info.salePriceU, latest_price,
                                                get_image_url(get_url(item_info.id)), query, name)

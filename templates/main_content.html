@@ -12,10 +12,10 @@
     <div class="category-content">
         <!-- Динамическая вставка категорий -->
         <ul class="category-list">
-            {% for product in products_db.get_all_products() %}
-                {% if product.cat_name %}
+            {% for cat, cat_name in products_db.get_unique_categories_and_names() %}
+                {% if cat_name %}
                 <li class="category-item">
-                    <a href="/{{ product.cat }}" class="category-link">{{ product.cat_name }}</a>
+                    <a href="/{{ cat }}" class="category-link">{{ cat_name }}</a>
                 </li>
                 {% endif %}
             {% endfor %}

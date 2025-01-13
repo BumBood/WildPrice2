@@ -94,6 +94,11 @@ class Database:
             print(e)
             return False
 
+    def get_unique_categories_and_names(self):
+        unique_categories = self.session.query(Product.cat, Product.cat_name).distinct().all()
+        return unique_categories
+
+
 
 if __name__ == '__main__':
     db = Database("products.db")
