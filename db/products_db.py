@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine, Column, Integer, Float, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+from random import shuffle
 
 Base = declarative_base()
 
@@ -77,6 +78,7 @@ class Database:
 
     def get_all_products(self):
         products = [product for product in self.session.query(Product).all()]
+        shuffle(products)
         return products
 
     def delete_product_by_id(self, id):
