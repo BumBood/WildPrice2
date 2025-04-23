@@ -1,39 +1,95 @@
 <!doctype html>
 <html lang="en">
 <head>
-
     <meta charset="utf-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
           crossorigin="anonymous">
-
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Наш CSS -->
     <link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
     <title>{{title}}</title>
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-light" style="background-color: #BC3D96;">
-        <a class="navbar-brand" href="/"><h1 style="color: white;">WildPrice</h1></a>
-        {% if current_user.is_authenticated %}
-        <a class="navbar-brand" style="color: white;" href="/favourites">Избранное</a>
-        <a class="navbar-brand" style="color: white;" href="/logout">Выход</a>
-        {% else %}
-        <p>
-            <a class="btn btn-light ml-auto" href="/register" style="margin-top: 1rem; ">Зарегистрироваться</a>
-            <a class="btn btn-light ml-auto" href="/login" style="margin-top: 1rem;">Войти</a>
-        </p>
-        {% endif %}
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><h1>WildPrice</h1></a>
+            <div class="ml-auto">
+                {% if current_user.is_authenticated %}
+                <a class="navbar-brand" href="/favourites">
+                    <i class="fas fa-heart mr-1"></i> Избранное
+                </a>
+                <a class="btn" href="/logout">
+                    <i class="fas fa-sign-out-alt mr-1"></i> Выход
+                </a>
+                {% else %}
+                <div class="d-flex">
+                    <a class="btn" href="/register">
+                        <i class="fas fa-user-plus mr-1"></i> Регистрация
+                    </a>
+                    <a class="btn" href="/login">
+                        <i class="fas fa-sign-in-alt mr-1"></i> Вход
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
     </nav>
 </header>
-        <main role="main" class="container">
-            {% block content %}
-            {% endblock %}
-        </main>
-    </body>
+<main role="main" class="container">
+    {% block content %}
+    {% endblock %}
+</main>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!-- Пользовательские скрипты -->
+<script src="/static/js/favorites.js"></script>
+
+<!-- Функция для обновления параметров URL -->
+<script>
+function updateQueryParam(url, key, value) {
+    const newUrl = new URL(url);
+    
+    // Проверка и исправление пути URL
+    let path = newUrl.pathname;
+    
+    // Исправление случая /category/cat=XXX на /category/XXX
+    if (path.includes('/category/cat=')) {
+        path = path.replace('/category/cat=', '/category/');
+    }
+    
+    // Исправление случая /cat=XXX на /category/XXX
+    if (path.includes('/cat=')) {
+        path = path.replace('/cat=', '/category/');
+    }
+    
+    // Исправление двойного cat=cat=
+    if (path.includes('cat=cat=')) {
+        path = path.replace('cat=cat=', 'category/');
+    }
+    
+    // Применяем исправленный путь
+    newUrl.pathname = path;
+    
+    // Добавляем параметр запроса
+    newUrl.searchParams.set(key, value);
+    
+    return newUrl.toString();
+}
+</script>
+</body>
 </html>
 
 

@@ -1,37 +1,141 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% with messages = get_flashed_messages() %}
-   {% if messages %}
-      {% for message in messages %}
-         <h5 class="card-title" align="center">{{ message }}</h5>
+<!-- Постоянная боковая панель категорий -->
+<div id="categoryPanel" class="category-panel">
+  <div class="category-panel-header">
+    <h3>Категории товаров</h3>
+    <button id="closePanelButton" class="close-button">&times;</button>
+  </div>
+  <div class="category-content">
+    <ul class="category-list">
+      {% for cat, cat_name in get_categories() %}
+        {% if cat_name %}
+        <li class="category-item">
+          <a href="/category/{{ cat }}" class="category-link">
+            <i class="fas fa-tag mr-2"></i>{{ cat_name }}
+          </a>
+        </li>
+        {% endif %}
       {% endfor %}
-   {% endif %}
-{% endwith %}
-<div class="row">
-    {% for product_id in favourites %}
-    {% set product = get_info(product_id) %}
-    <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-            <img src="{{ product.image_link }}" class="card-img-top" alt="{{ product.name }}">
-            <div class="card-body">
-                <h5 class="card-title">{{ product.name }}</h5>
-                <p class="card-text">ID: {{ product.id }}</p>
-                <p class="card-text">Цена: {{ product.salePriceU|int }} руб.</p>
-                <p class="card-text">Скидка: {{ ((product.priceU - product.salePriceU) / product.priceU *
-                    100)|round|int }}%</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <a href="https://www.wildberries.ru/catalog/{{ product.id }}/detail.aspx"
-                           class="btn btn-sm btn-outline-secondary">Подробнее</a>
-                        <a href="{{ url_for('delete_from_favourites', product_id=product.id) }}"
-                           class="btn btn-sm btn-outline-secondary">Удалить из избранного</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% endfor %}
+    </ul>
+  </div>
 </div>
+
+<!-- Основной контент -->
+<div id="mainContentWrapper" class="main-content-wrapper">
+  <div class="main-container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div></div>
+      <h2 class="m-0 page-title"><i class="fas fa-heart mr-2"></i>Избранное</h2>
+      <a href="/" class="btn">
+        <i class="fas fa-arrow-left mr-2"></i>Вернуться на главную
+      </a>
+    </div>
+    
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-success">
+            <i class="fas fa-check-circle mr-2"></i>{{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    
+    {% if favourites|length > 0 %}
+    <!-- Панель сортировки -->
+    <div class="sorting-panel mb-4">
+      <label for="sortSelect" class="sort-label">Сортировать по:</label>
+      <div class="sort-select-wrapper">
+        <select id="sortSelect" class="sort-select" onchange="window.location = updateQueryParam(updateQueryParam(window.location.href, 'sort_by', this.value), 'reverse', '0')">
+          <option value="discount" {% if sort_by == 'discount' %}selected{% endif %}>Скидке</option>
+          <option value="name" {% if sort_by == 'name' %}selected{% endif %}>Названию</option>
+          <option value="price" {% if sort_by == 'price' %}selected{% endif %}>Цене</option>
+          <option value="date" {% if sort_by == 'date' %}selected{% endif %}>Дате добавления</option>
+        </select>
+        <div class="sort-select-arrow"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <button class="sort-direction-btn" onclick="window.location = updateQueryParam(window.location.href, 'reverse', {% if reverse_sort %}'0'{% else %}'1'{% endif %})">
+        <i class="fas {% if reverse_sort %}fa-sort-amount-up{% else %}fa-sort-amount-down{% endif %}"></i>
+      </button>
+    </div>
+    <div class="row">
+      {% for product_id in sorted_favourites %}
+      {% if product_id in products_info %}
+      {% set product = products_info[product_id] %}
+      <div class="product-card card-wrapper mb-4">
+        <div class="card h-100">
+          {% if product.previous_price > product.price %}
+          <div class="discount-badge">
+            -{{ ((product.previous_price - product.price) / product.previous_price * 100)|round|int }}%
+          </div>
+          {% endif %}
+          <div class="card-img-container">
+            <img src="{{ product.image_url }}" class="card-img-top" alt="{{ product.name }}">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <div class="product-info">
+              <div class="product-id text-muted small">ID: {{ product.id }}</div>
+              <div class="card-price mt-2">
+                <span class="current-price">{{ product.price|int }} ₽</span>
+                {% if product.previous_price > product.price %}
+                <span class="previous-price">{{ product.previous_price|int }} ₽</span>
+                {% endif %}
+              </div>
+            </div>
+            <div class="btn-group mt-auto">
+              <a href="https://www.wildberries.ru/catalog/{{ product.id }}/detail.aspx" 
+                class="btn btn-outline-secondary" target="_blank">
+                <i class="fas fa-external-link-alt mr-1"></i> Подробнее
+              </a>
+              <a href="#" 
+                class="btn btn-outline-secondary remove-favorite-btn"
+                data-product-id="{{ product.id }}">
+                <i class="fas fa-trash mr-1"></i> Удалить
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-favourites">
+      <div class="empty-icon">
+        <i class="fas fa-heart-broken" style="font-size: 2.5rem; color: var(--primary-color); opacity: 0.7;"></i>
+      </div>
+      <h3 class="mb-3">В избранном пока нет товаров</h3>
+      <p class="text-muted mb-4">Добавляйте товары в избранное, чтобы не потерять их</p>
+      <a href="/" class="btn">
+        <i class="fas fa-shopping-bag mr-2"></i>Перейти к товарам
+      </a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  // Скрипт для управления панелью категорий 
+  document.addEventListener('DOMContentLoaded', function() {
+    const categoryPanel = document.getElementById('categoryPanel');
+    const closePanelButton = document.getElementById('closePanelButton');
+    
+    // Обработчик закрытия панели
+    closePanelButton.addEventListener('click', function() {
+      categoryPanel.classList.remove('open');
+    });
+    
+    // Закрыть панель при клике вне её
+    document.addEventListener('click', function(event) {
+      if (categoryPanel.classList.contains('open') && 
+          !categoryPanel.contains(event.target)) {
+        categoryPanel.classList.remove('open');
+      }
+    });
+  });
+</script>
 
 {% endblock %}

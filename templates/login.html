@@ -1,34 +1,62 @@
 {% extends "base.html" %}
   
-  {% block content %}
-    <h1 style="text-align: center;">Авторизация</h1>
-    <form action="" method="post" class='login-container'>
-      {{ form.hidden_tag() }}
-      <p>
-        {{ form.email.label }}<br>
-        {{ form.email(class="form-control", type="email") }}<br>
-        {% for error in form.email.errors %}
-          <div class="alert alert-danger" role="alert">
-            {{ error }}
+{% block content %}
+<div class="auth-container">
+  <div class="row justify-content-center w-100">
+    <div class="col-md-8 col-lg-6 col-xl-5 d-flex justify-content-center">
+      <div class="login-container">
+        <h1>Авторизация</h1>
+        
+        <form action="" method="post">
+          {{ form.hidden_tag() }}
+          
+          <div class="form-group">
+            {{ form.email.label }}
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+              </div>
+              {{ form.email(class="form-control", type="email", placeholder="Введите email") }}
+            </div>
+            {% for error in form.email.errors %}
+              <div class="alert alert-danger" role="alert">
+                {{ error }}
+              </div>
+            {% endfor %}
           </div>
-        {% endfor %}
-      </p>
-      <p>
-        {{ form.password.label }}<br>
-        {{ form.password(class="form-control", type="password") }}<br>
-        {% for error in form.password.errors %}
-          <div class="alert alert-danger" role="alert">
-            {{ error }}
+          
+          <div class="form-group">
+            {{ form.password.label }}
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+              </div>
+              {{ form.password(class="form-control", type="password", placeholder="Введите пароль") }}
+            </div>
+            {% for error in form.password.errors %}
+              <div class="alert alert-danger" role="alert">
+                {{ error }}
+              </div>
+            {% endfor %}
           </div>
-        {% endfor %}
-      </p>
-      <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-      <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
-      <div style="color: red;">{{ message }}</div>
-      
-    </form>
-  
-    <p style="text-align: center;">
-      Нет аккаунта? <a href="register">Зарегистрироваться</a>
-    </p>
-  {% endblock %}
+          
+          <div class="form-check">
+            {{ form.remember_me(class="form-check-input") }} 
+            {{ form.remember_me.label(class="form-check-label") }}
+          </div>
+          
+          {{ form.submit(type="submit", class="btn btn-primary btn-block") }}
+          
+          {% if message %}
+          <div class="alert alert-danger mt-3">{{ message }}</div>
+          {% endif %}
+        </form>
+        
+        <div class="text-center mt-3">
+          <p>Нет аккаунта? <a href="register">Зарегистрироваться</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,1213 @@
+[
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "sqlalchemy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "engine_from_config",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "pool",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Float",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Float",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "fileConfig",
+        "importPath": "logging.config",
+        "description": "logging.config",
+        "isExtraImport": true,
+        "detail": "logging.config",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "db.products_db",
+        "description": "db.products_db",
+        "isExtraImport": true,
+        "detail": "db.products_db",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "importPath": "db.products_db",
+        "description": "db.products_db",
+        "isExtraImport": true,
+        "detail": "db.products_db",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "importPath": "db.products_db",
+        "description": "db.products_db",
+        "isExtraImport": true,
+        "detail": "db.products_db",
+        "documentation": {}
+    },
+    {
+        "label": "sqlalchemy.orm",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "ARRAY",
+        "importPath": "sqlalchemy.dialects.postgresql",
+        "description": "sqlalchemy.dialects.postgresql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.dialects.postgresql",
+        "documentation": {}
+    },
+    {
+        "label": "generate_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "check_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "UserMixin",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "LoginManager",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "current_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "logout_user",
+        "importPath": "flask_login",
+        "description": "flask_login",
+        "isExtraImport": true,
+        "detail": "flask_login",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "shuffle",
+        "importPath": "random",
+        "description": "random",
+        "isExtraImport": true,
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "shuffle",
+        "importPath": "random",
+        "description": "random",
+        "isExtraImport": true,
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "FlaskForm",
+        "importPath": "flask_wtf",
+        "description": "flask_wtf",
+        "isExtraImport": true,
+        "detail": "flask_wtf",
+        "documentation": {}
+    },
+    {
+        "label": "FlaskForm",
+        "importPath": "flask_wtf",
+        "description": "flask_wtf",
+        "isExtraImport": true,
+        "detail": "flask_wtf",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "StringField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "TextAreaField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "SubmitField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "EmailField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "BooleanField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "SubmitField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "EmailField",
+        "importPath": "wtforms",
+        "description": "wtforms",
+        "isExtraImport": true,
+        "detail": "wtforms",
+        "documentation": {}
+    },
+    {
+        "label": "DataRequired",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "DataRequired",
+        "importPath": "wtforms.validators",
+        "description": "wtforms.validators",
+        "isExtraImport": true,
+        "detail": "wtforms.validators",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "field_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "sleep",
+        "importPath": "time",
+        "description": "time",
+        "isExtraImport": true,
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "DBItem",
+        "importPath": "parser.model",
+        "description": "parser.model",
+        "isExtraImport": true,
+        "detail": "parser.model",
+        "documentation": {}
+    },
+    {
+        "label": "Item",
+        "importPath": "parser.model",
+        "description": "parser.model",
+        "isExtraImport": true,
+        "detail": "parser.model",
+        "documentation": {}
+    },
+    {
+        "label": "Item",
+        "importPath": "parser.model",
+        "description": "parser.model",
+        "isExtraImport": true,
+        "detail": "parser.model",
+        "documentation": {}
+    },
+    {
+        "label": "parsing_list",
+        "importPath": "parser.model",
+        "description": "parser.model",
+        "isExtraImport": true,
+        "detail": "parser.model",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "url_for",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "flash",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "api",
+        "description": "api",
+        "isExtraImport": true,
+        "detail": "api",
+        "documentation": {}
+    },
+    {
+        "label": "db_session",
+        "importPath": "data",
+        "description": "data",
+        "isExtraImport": true,
+        "detail": "data",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "data.users",
+        "description": "data.users",
+        "isExtraImport": true,
+        "detail": "data.users",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterForm",
+        "importPath": "forms.user",
+        "description": "forms.user",
+        "isExtraImport": true,
+        "detail": "forms.user",
+        "documentation": {}
+    },
+    {
+        "label": "get_info",
+        "importPath": "parser.wildberries_parser",
+        "description": "parser.wildberries_parser",
+        "isExtraImport": true,
+        "detail": "parser.wildberries_parser",
+        "documentation": {}
+    },
+    {
+        "label": "get_image_url",
+        "importPath": "parser.wildberries_parser",
+        "description": "parser.wildberries_parser",
+        "isExtraImport": true,
+        "detail": "parser.wildberries_parser",
+        "documentation": {}
+    },
+    {
+        "label": "get_url",
+        "importPath": "parser.wildberries_parser",
+        "description": "parser.wildberries_parser",
+        "isExtraImport": true,
+        "detail": "parser.wildberries_parser",
+        "documentation": {}
+    },
+    {
+        "label": "get_sale",
+        "importPath": "parser.wildberries_parser",
+        "description": "parser.wildberries_parser",
+        "isExtraImport": true,
+        "detail": "parser.wildberries_parser",
+        "documentation": {}
+    },
+    {
+        "label": "category_parser",
+        "importPath": "parser.wildberries_parser",
+        "description": "parser.wildberries_parser",
+        "isExtraImport": true,
+        "detail": "parser.wildberries_parser",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "Thread",
+        "importPath": "threading",
+        "description": "threading",
+        "isExtraImport": true,
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"Scripts\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"..\\\\Lib\\\\site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".venv.Scripts.activate_this",
+        "description": ".venv.Scripts.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".venv.Scripts.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.ab5f050eec8a_add_username_column_to_users_table",
+        "description": "alembic.versions.ab5f050eec8a_add_username_column_to_users_table",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column('products', sa.Column('cat', sa.Integer(), nullable=True))\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('products', 'cat')\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.ab5f050eec8a_add_username_column_to_users_table",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.ab5f050eec8a_add_username_column_to_users_table",
+        "description": "alembic.versions.ab5f050eec8a_add_username_column_to_users_table",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_column('products', 'cat')\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.ab5f050eec8a_add_username_column_to_users_table",
+        "documentation": {}
+    },
+    {
+        "label": "run_migrations_offline",
+        "kind": 2,
+        "importPath": "alembic.env",
+        "description": "alembic.env",
+        "peekOfCode": "def run_migrations_offline() -> None:\n    \"\"\"Run migrations in 'offline' mode.\n    This configures the context with just a URL\n    and not an Engine, though an Engine is acceptable\n    here as well.  By skipping the Engine creation\n    we don't even need a DBAPI to be available.\n    Calls to context.execute() here emit the given string to the\n    script output.\n    \"\"\"\n    url = config.get_main_option(\"sqlalchemy.url\")",
+        "detail": "alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "run_migrations_online",
+        "kind": 2,
+        "importPath": "alembic.env",
+        "description": "alembic.env",
+        "peekOfCode": "def run_migrations_online() -> None:\n    \"\"\"Run migrations in 'online' mode.\n    In this scenario we need to create an Engine\n    and associate a connection with the context.\n    \"\"\"\n    connectable = engine_from_config(\n        config.get_section(config.config_ini_section, {}),\n        prefix=\"sqlalchemy.\",\n        poolclass=pool.NullPool,\n    )",
+        "detail": "alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "kind": 5,
+        "importPath": "alembic.env",
+        "description": "alembic.env",
+        "peekOfCode": "config = context.config\n# Interpret the config file for Python logging.\n# This line sets up loggers basically.\nif config.config_file_name is not None:\n    fileConfig(config.config_file_name)\n# add your model's MetaData object here\n# for 'autogenerate' support\n# from myapp import mymodel\n# target_metadata = mymodel.Base.metadata\nfrom db.products_db import Base",
+        "detail": "alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "target_metadata",
+        "kind": 5,
+        "importPath": "alembic.env",
+        "description": "alembic.env",
+        "peekOfCode": "target_metadata = Base.metadata\n# other values from the config, defined by the needs of env.py,\n# can be acquired:\n# my_important_option = config.get_main_option(\"my_important_option\")\n# ... etc.\ndef run_migrations_offline() -> None:\n    \"\"\"Run migrations in 'offline' mode.\n    This configures the context with just a URL\n    and not an Engine, though an Engine is acceptable\n    here as well.  By skipping the Engine creation",
+        "detail": "alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "global_init",
+        "kind": 2,
+        "importPath": "data.db_session",
+        "description": "data.db_session",
+        "peekOfCode": "def global_init(db_file):\n    global __factory\n    if __factory:\n        return\n    if not db_file or not db_file.strip():\n        raise Exception(\"Необходимо указать файл базы данных.\")\n    conn_str = f'sqlite:///{db_file.strip()}?check_same_thread=False'\n    print(f\"Подключение к базе данных по адресу {conn_str}\")\n    engine = sa.create_engine(conn_str, echo=False)\n    __factory = orm.sessionmaker(bind=engine)",
+        "detail": "data.db_session",
+        "documentation": {}
+    },
+    {
+        "label": "create_session",
+        "kind": 2,
+        "importPath": "data.db_session",
+        "description": "data.db_session",
+        "peekOfCode": "def create_session() -> Session:\n    global __factory\n    return __factory()",
+        "detail": "data.db_session",
+        "documentation": {}
+    },
+    {
+        "label": "SqlAlchemyBase",
+        "kind": 5,
+        "importPath": "data.db_session",
+        "description": "data.db_session",
+        "peekOfCode": "SqlAlchemyBase = orm.declarative_base()\n__factory = None\ndef global_init(db_file):\n    global __factory\n    if __factory:\n        return\n    if not db_file or not db_file.strip():\n        raise Exception(\"Необходимо указать файл базы данных.\")\n    conn_str = f'sqlite:///{db_file.strip()}?check_same_thread=False'\n    print(f\"Подключение к базе данных по адресу {conn_str}\")",
+        "detail": "data.db_session",
+        "documentation": {}
+    },
+    {
+        "label": "__factory",
+        "kind": 5,
+        "importPath": "data.db_session",
+        "description": "data.db_session",
+        "peekOfCode": "__factory = None\ndef global_init(db_file):\n    global __factory\n    if __factory:\n        return\n    if not db_file or not db_file.strip():\n        raise Exception(\"Необходимо указать файл базы данных.\")\n    conn_str = f'sqlite:///{db_file.strip()}?check_same_thread=False'\n    print(f\"Подключение к базе данных по адресу {conn_str}\")\n    engine = sa.create_engine(conn_str, echo=False)",
+        "detail": "data.db_session",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "data.users",
+        "description": "data.users",
+        "peekOfCode": "class User(SqlAlchemyBase, UserMixin):\n    __tablename__ = 'users'\n    id = sqlalchemy.Column(sqlalchemy.Integer, \n                           primary_key=True, autoincrement=True)\n    name = sqlalchemy.Column(sqlalchemy.String, nullable=True)\n    email = sqlalchemy.Column(sqlalchemy.String, \n                              index=True, unique=True, nullable=True)\n    hashed_password = sqlalchemy.Column(sqlalchemy.String, nullable=True)\n    created_date = sqlalchemy.Column(sqlalchemy.DateTime, \n                                     default=datetime.datetime.now)",
+        "detail": "data.users",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "kind": 6,
+        "importPath": "db.products_db",
+        "description": "db.products_db",
+        "peekOfCode": "class Product(Base):\n    __tablename__ = \"products\"\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    price = Column(Float)\n    previous_price = Column(Float)\n    image_url = Column(String)\n    cat = Column(Integer)\n    cat_name = Column(String)\nclass Database:",
+        "detail": "db.products_db",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "kind": 6,
+        "importPath": "db.products_db",
+        "description": "db.products_db",
+        "peekOfCode": "class Database:\n    def __init__(self, db_path):\n        self.engine = create_engine(f\"sqlite:///{db_path}\")\n        Base.metadata.create_all(self.engine)\n        self.Session = sessionmaker(bind=self.engine)\n        self.session = self.Session()\n    def add(self, id, name, price, latest_price, image_url, cat, cat_name):\n        new_product = Product(\n            id=id,\n            name=name,",
+        "detail": "db.products_db",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "db.products_db",
+        "description": "db.products_db",
+        "peekOfCode": "Base = declarative_base()\nclass Product(Base):\n    __tablename__ = \"products\"\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    price = Column(Float)\n    previous_price = Column(Float)\n    image_url = Column(String)\n    cat = Column(Integer)\n    cat_name = Column(String)",
+        "detail": "db.products_db",
+        "documentation": {}
+    },
+    {
+        "label": "RegisterForm",
+        "kind": 6,
+        "importPath": "forms.user",
+        "description": "forms.user",
+        "peekOfCode": "class RegisterForm(FlaskForm):\n    name = StringField(\"Имя пользователя\", validators=[DataRequired()])\n    email = EmailField(\"Почта\", validators=[DataRequired()])\n    password = PasswordField(\"Пароль\", validators=[DataRequired()])\n    password_again = PasswordField(\"Повторите пароль\", validators=[DataRequired()])\n    submit = SubmitField(\"Зарегистрироваться\")",
+        "detail": "forms.user",
+        "documentation": {}
+    },
+    {
+        "label": "Item",
+        "kind": 6,
+        "importPath": "parser.model",
+        "description": "parser.model",
+        "peekOfCode": "class Item(BaseModel):\n    id: int\n    name: str\n    salePriceU: float\n    priceU: float\n    discount: float = 0\n    brand: str = \"\"\n    reviewRating: float\n    image_link: str = None\n    feedbacks: int",
+        "detail": "parser.model",
+        "documentation": {}
+    },
+    {
+        "label": "DBItem",
+        "kind": 6,
+        "importPath": "parser.model",
+        "description": "parser.model",
+        "peekOfCode": "class DBItem(BaseModel):\n    id: int\n    name: str\n    salePriceU: float\n    @field_validator('salePriceU')\n    def convert_sale_price(cls, sale_price: int) -> float:\n        if sale_price is not None:\n            return sale_price / 100",
+        "detail": "parser.model",
+        "documentation": {}
+    },
+    {
+        "label": "parsing_list",
+        "kind": 5,
+        "importPath": "parser.model",
+        "description": "parser.model",
+        "peekOfCode": "parsing_list = [['Блузки и рубашки', 'bl_shirts', 'cat=8126'], ['Брюки', 'pants', 'cat=8127'],\n                ['Верхняя одежда', 'outwear1', 'cat=63010'],\n                ['Джемперы, водолазки и кардиганы', 'jumpers_cardigans', 'cat=8130'], ['Джинсы', 'jeans', 'cat=8131'],\n                ['Комбинезоны', 'overalls', 'cat=8133'], ['Костюмы', 'costumes', 'cat=8134'],\n                ['Лонгсливы', 'sweatshirts_hoodies', 'cat=9411'],\n                ['Пиджаки, жилеты и жакеты', 'blazers_wamuses', 'cat=8136'],\n                ['Платья и сарафаны', 'dresses', 'cat=8137'],\n                ['Толстовки, свитшоты и худи', 'sweatshirts_hoodies', 'cat=8140'],\n                ['Туники', 'sweatshirts_hoodies', 'cat=8141'], ['Футболки и топы', 'tops_tshirts1', 'cat=8142'],\n                ['Халаты', 'women_bathrobes', 'cat=128996'], ['Шорты', 'shorts', 'cat=10567'],",
+        "detail": "parser.model",
+        "documentation": {}
+    },
+    {
+        "label": "get_info",
+        "kind": 2,
+        "importPath": "parser.wildberries_parser",
+        "description": "parser.wildberries_parser",
+        "peekOfCode": "def get_info(art: int):\n    response = requests.get(\n        f'https://card.wb.ru/cards/v1/detail?appType=1&curr=rub&dest=-1257786&spp=29&nm={art}',\n    )\n    print(art, response.text)\n    item_info = Item.model_validate(response.json()[\"data\"][\"products\"][0])\n    item_info.image_link = get_image_url(get_url(art))\n    item_info.discount = get_sale(item_info.priceU, item_info.salePriceU)\n    return item_info\ndef get_latest_price(art: int) -> int:",
+        "detail": "parser.wildberries_parser",
+        "documentation": {}
+    },
+    {
+        "label": "get_latest_price",
+        "kind": 2,
+        "importPath": "parser.wildberries_parser",
+        "description": "parser.wildberries_parser",
+        "peekOfCode": "def get_latest_price(art: int) -> int:\n    try:\n        url = get_url(art) + \"info/price-history.json\"\n        prices_json = requests.get(url).json()\n        latest_price = list(map(lambda x: x[\"price\"][\"RUB\"] // 100, prices_json))[-1]\n        return latest_price\n    except Exception as e:\n        print(e.__class__.__name__, e)\n        return None\ndef get_url(art: int) -> str:",
+        "detail": "parser.wildberries_parser",
+        "documentation": {}
+    },
+    {
+        "label": "get_url",
+        "kind": 2,
+        "importPath": "parser.wildberries_parser",
+        "description": "parser.wildberries_parser",
+        "peekOfCode": "def get_url(art: int) -> str:\n    art_str = str(art)\n    part = art // 1000\n    vol = art // 100000\n    if 0 <= vol <= 143:\n        basket = '01'\n    elif 144 <= vol <= 287:\n        basket = '02'\n    elif 288 <= vol <= 431:\n        basket = '03'",
+        "detail": "parser.wildberries_parser",
+        "documentation": {}
+    },
+    {
+        "label": "get_sale",
+        "kind": 2,
+        "importPath": "parser.wildberries_parser",
+        "description": "parser.wildberries_parser",
+        "peekOfCode": "def get_sale(previous_price, new_price) -> float:\n    return (previous_price - new_price) / previous_price\ndef get_image_url(url: str) -> str:\n    image_url = url + \"images/big/1.webp\"\n    return image_url\ndef category_parser(name, shard, query):\n    print([name, shard, query], \"начало работу\")\n    if \"subject\" in query:\n        query = str(query).replace('subject', 'cat')\n    try:",
+        "detail": "parser.wildberries_parser",
+        "documentation": {}
+    },
+    {
+        "label": "get_image_url",
+        "kind": 2,
+        "importPath": "parser.wildberries_parser",
+        "description": "parser.wildberries_parser",
+        "peekOfCode": "def get_image_url(url: str) -> str:\n    image_url = url + \"images/big/1.webp\"\n    return image_url\ndef category_parser(name, shard, query):\n    print([name, shard, query], \"начало работу\")\n    if \"subject\" in query:\n        query = str(query).replace('subject', 'cat')\n    try:\n        page = 1\n        while True:",
+        "detail": "parser.wildberries_parser",
+        "documentation": {}
+    },
+    {
+        "label": "category_parser",
+        "kind": 2,
+        "importPath": "parser.wildberries_parser",
+        "description": "parser.wildberries_parser",
+        "peekOfCode": "def category_parser(name, shard, query):\n    print([name, shard, query], \"начало работу\")\n    if \"subject\" in query:\n        query = str(query).replace('subject', 'cat')\n    try:\n        page = 1\n        while True:\n            try:\n                print(\"page:\", page)\n                global resp",
+        "detail": "parser.wildberries_parser",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "parser.wildberries_parser",
+        "description": "parser.wildberries_parser",
+        "peekOfCode": "db = Database(\"db/products.db\")\ndef get_info(art: int):\n    response = requests.get(\n        f'https://card.wb.ru/cards/v1/detail?appType=1&curr=rub&dest=-1257786&spp=29&nm={art}',\n    )\n    print(art, response.text)\n    item_info = Item.model_validate(response.json()[\"data\"][\"products\"][0])\n    item_info.image_link = get_image_url(get_url(art))\n    item_info.discount = get_sale(item_info.priceU, item_info.salePriceU)\n    return item_info",
+        "detail": "parser.wildberries_parser",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "kind": 6,
+        "importPath": "api",
+        "description": "api",
+        "peekOfCode": "class Product(Base):\n    # Определяем модель Product с полями id, name и price\n    __tablename__ = 'products'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    price = Column(Float)\nclass Database:\n    def __init__(self, db_path):\n        # Создаем движок SQLAlchemy для подключения к базе данных\n        self.engine = create_engine(f'sqlite:///{db_path}')",
+        "detail": "api",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "kind": 6,
+        "importPath": "api",
+        "description": "api",
+        "peekOfCode": "class Database:\n    def __init__(self, db_path):\n        # Создаем движок SQLAlchemy для подключения к базе данных\n        self.engine = create_engine(f'sqlite:///{db_path}')\n        # Создаем таблицы в базе данных, если они не существуют\n        Base.metadata.create_all(self.engine)\n        # Создаем фабрику сессий SQLAlchemy\n        self.Session = sessionmaker(bind=self.engine)\n    def get_session(self):\n        # Метод для получения новой сессии SQLAlchemy",
+        "detail": "api",
+        "documentation": {}
+    },
+    {
+        "label": "get_product_info",
+        "kind": 2,
+        "importPath": "api",
+        "description": "api",
+        "peekOfCode": "def get_product_info(product_id):\n    # Обработчик GET-запроса для получения информации о продукте по его ID\n    session = db.get_session()  # Получаем новую сессию SQLAlchemy\n    product = session.query(Product).filter(Product.id == product_id).first()  # Находим продукт по ID\n    session.close()  # Закрываем сессию\n    if product:\n        # Если продукт найден, возвращаем его информацию в формате JSON с поддержкой кириллицы\n        return json.dumps({'id': product.id, 'name': product.name, 'price': product.price}, ensure_ascii=False)\n    else:\n        # Если продукт не найден, возвращаем ошибку 404",
+        "detail": "api",
+        "documentation": {}
+    },
+    {
+        "label": "get_product_list",
+        "kind": 2,
+        "importPath": "api",
+        "description": "api",
+        "peekOfCode": "def get_product_list():\n    # Обработчик GET-запроса для получения списка всех продуктов\n    session = db.get_session()  # Получаем новую сессию SQLAlchemy\n    products = session.query(Product).all()  # Получаем все продукты из базы данных\n    session.close()  # Закрываем сессию\n    product_list = [{'id': product.id, 'name': product.name, 'price': product.price} for product in products]\n    # Создаем список словарей с информацией о продуктах\n    return json.dumps(product_list,\n                      ensure_ascii=False)  # Возвращаем список продуктов в формате JSON с поддержкой кириллицы\nif __name__ == '__main__':",
+        "detail": "api",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "api",
+        "description": "api",
+        "peekOfCode": "app = Blueprint('api', __name__, url_prefix='/api')\nBase = declarative_base()\nclass Product(Base):\n    # Определяем модель Product с полями id, name и price\n    __tablename__ = 'products'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    price = Column(Float)\nclass Database:\n    def __init__(self, db_path):",
+        "detail": "api",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "api",
+        "description": "api",
+        "peekOfCode": "Base = declarative_base()\nclass Product(Base):\n    # Определяем модель Product с полями id, name и price\n    __tablename__ = 'products'\n    id = Column(Integer, primary_key=True)\n    name = Column(String)\n    price = Column(Float)\nclass Database:\n    def __init__(self, db_path):\n        # Создаем движок SQLAlchemy для подключения к базе данных",
+        "detail": "api",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "api",
+        "description": "api",
+        "peekOfCode": "db = Database('db/products.db')  # Создаем экземпляр Database для работы с базой данных\n@app.route('/id/<int:product_id>', methods=['GET'])\ndef get_product_info(product_id):\n    # Обработчик GET-запроса для получения информации о продукте по его ID\n    session = db.get_session()  # Получаем новую сессию SQLAlchemy\n    product = session.query(Product).filter(Product.id == product_id).first()  # Находим продукт по ID\n    session.close()  # Закрываем сессию\n    if product:\n        # Если продукт найден, возвращаем его информацию в формате JSON с поддержкой кириллицы\n        return json.dumps({'id': product.id, 'name': product.name, 'price': product.price}, ensure_ascii=False)",
+        "detail": "api",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class LoginForm(FlaskForm):\n    email = EmailField(\"Почта\", validators=[DataRequired()])\n    password = PasswordField(\"Пароль\", validators=[DataRequired()])\n    remember_me = BooleanField(\"Запомнить меня\")\n    submit = SubmitField(\"Войти\")\napp = Flask(__name__)\napp.register_blueprint(api_app)\napp.config[\"SECRET_KEY\"] = \"omegaultra_secret_key\"\nlogin_manager = LoginManager()\nlogin_manager.init_app(app)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "load_user",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def load_user(user_id):\n    db_sess = db_session.create_session()\n    return db_sess.query(User).get(user_id)\n@app.route(\"/\")\n@app.route(\"/index\")\ndef index():  # Renamed from login()\n    sort_by = request.args.get(\n        \"sort_by\", \"discount\"\n    )  # По умолчанию сортировка по размеру скидки\n    reverse_sort = (",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def index():  # Renamed from login()\n    sort_by = request.args.get(\n        \"sort_by\", \"discount\"\n    )  # По умолчанию сортировка по размеру скидки\n    reverse_sort = (\n        request.args.get(\"reverse\", \"0\") == \"1\"\n    )  # Обратная сортировка (0 - нет, 1 - да)\n    return render_template(\n        \"main_content.html\",\n        title=\"Wildprice\",",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "favourites",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def favourites():  # Страница с избранными\n    sort_by = request.args.get(\n        \"sort_by\", \"discount\"\n    )  # По умолчанию сортировка по размеру скидки\n    reverse_sort = (\n        request.args.get(\"reverse\", \"0\") == \"1\"\n    )  # Обратная сортировка (0 - нет, 1 - да)\n    if current_user.is_authenticated:\n        db_sess = db_session.create_session()\n        user = db_sess.query(User).get(current_user.id)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def login():\n    form = LoginForm()\n    if form.validate_on_submit():\n        db_sess = db_session.create_session()\n        user = db_sess.query(User).filter(User.email == form.email.data).first()\n        if user and user.check_password(form.password.data):\n            login_user(user, remember=form.remember_me.data)\n            return redirect(\"/\")\n        return render_template(\n            \"login.html\", message=\"Неправильный логин или пароль\", form=form",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "reqister",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def reqister():\n    form = RegisterForm()\n    if form.validate_on_submit():\n        if form.password.data != form.password_again.data:\n            return render_template(\n                \"register.html\",\n                title=\"Регистрация\",\n                form=form,\n                message=\"Пароли не совпадают\",\n            )",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "show_category",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def show_category(category_id):\n    sort_by = request.args.get(\n        \"sort_by\", \"discount\"\n    )  # По умолчанию сортировка по размеру скидки\n    reverse_sort = (\n        request.args.get(\"reverse\", \"0\") == \"1\"\n    )  # Обратная сортировка (0 - нет, 1 - да)\n    products_db = Database(\"db/products.db\")\n    # Получаем все товары с указанной категорией\n    all_products = products_db.get_all_products_sorted(sort_by, reverse_sort)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "add_to_favourites",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def add_to_favourites(product_id):\n    if current_user.is_authenticated:\n        db_sess = db_session.create_session()\n        user = db_sess.query(User).get(current_user.id)\n        user.add_to_favourites(product_id)\n        db_sess.commit()\n        # Проверяем если это AJAX запрос\n        if request.headers.get(\"X-Requested-With\") == \"XMLHttpRequest\":\n            return jsonify({\"success\": True})\n    # Если пользователь не авторизован или не AJAX запрос, редирект",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "delete_from_favourites",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def delete_from_favourites(product_id):\n    if current_user.is_authenticated:\n        db_sess = db_session.create_session()\n        user = db_sess.query(User).get(current_user.id)\n        user.delete_from_favourites(str(product_id))\n        db_sess.commit()\n        # Проверяем если это AJAX запрос\n        if request.headers.get(\"X-Requested-With\") == \"XMLHttpRequest\":\n            return jsonify({\"success\": True})\n    # Если пользователь не авторизован или не AJAX запрос, редирект",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def logout():\n    logout_user()\n    return redirect(\"/\")\n@app.route(\"/category/cat=<int:category_id>\")\ndef wrong_category_url_2(category_id):\n    \"\"\"Обрабатывает ошибочный URL вида /category/cat=ID\"\"\"\n    # Сохраняем параметры сортировки\n    sort_by = request.args.get(\"sort_by\", \"discount\")\n    reverse_sort = request.args.get(\"reverse\", \"0\")\n    # Перенаправляем на правильный URL",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "wrong_category_url_2",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def wrong_category_url_2(category_id):\n    \"\"\"Обрабатывает ошибочный URL вида /category/cat=ID\"\"\"\n    # Сохраняем параметры сортировки\n    sort_by = request.args.get(\"sort_by\", \"discount\")\n    reverse_sort = request.args.get(\"reverse\", \"0\")\n    # Перенаправляем на правильный URL\n    return redirect(\n        url_for(\n            \"show_category\",\n            category_id=category_id,",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "catch_all_category",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def catch_all_category(path):\n    \"\"\"Обрабатывает любые неверные форматы URL для категорий\"\"\"\n    # Пытаемся извлечь ID категории из пути\n    match = re.search(r\"(\\d+)\", path)\n    if match:\n        category_id = int(match.group(1))\n        # Сохраняем параметры сортировки\n        sort_by = request.args.get(\"sort_by\", \"discount\")\n        reverse_sort = request.args.get(\"reverse\", \"0\")\n        # Перенаправляем на правильный URL",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "BASE_DIR = os.path.abspath(os.path.dirname(__file__))\n# Добавляем путь к папке parser в sys.path\nsys.path.append(os.path.join(BASE_DIR, \"parser\"))\nclass LoginForm(FlaskForm):\n    email = EmailField(\"Почта\", validators=[DataRequired()])\n    password = PasswordField(\"Пароль\", validators=[DataRequired()])\n    remember_me = BooleanField(\"Запомнить меня\")\n    submit = SubmitField(\"Войти\")\napp = Flask(__name__)\napp.register_blueprint(api_app)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = Flask(__name__)\napp.register_blueprint(api_app)\napp.config[\"SECRET_KEY\"] = \"omegaultra_secret_key\"\nlogin_manager = LoginManager()\nlogin_manager.init_app(app)\n@login_manager.user_loader\ndef load_user(user_id):\n    db_sess = db_session.create_session()\n    return db_sess.query(User).get(user_id)\n@app.route(\"/\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app.config[\"SECRET_KEY\"]",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app.config[\"SECRET_KEY\"] = \"omegaultra_secret_key\"\nlogin_manager = LoginManager()\nlogin_manager.init_app(app)\n@login_manager.user_loader\ndef load_user(user_id):\n    db_sess = db_session.create_session()\n    return db_sess.query(User).get(user_id)\n@app.route(\"/\")\n@app.route(\"/index\")\ndef index():  # Renamed from login()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "login_manager",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "login_manager = LoginManager()\nlogin_manager.init_app(app)\n@login_manager.user_loader\ndef load_user(user_id):\n    db_sess = db_session.create_session()\n    return db_sess.query(User).get(user_id)\n@app.route(\"/\")\n@app.route(\"/index\")\ndef index():  # Renamed from login()\n    sort_by = request.args.get(",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "start_cat_list_parser",
+        "kind": 2,
+        "importPath": "start_parser",
+        "description": "start_parser",
+        "peekOfCode": "def start_cat_list_parser(cat_list: list):\n    while True:\n        shuffle(cat_list)\n        for cat in cat_list:\n            category_parser(*cat)\nif __name__ == '__main__':\n    clothing_thread = Thread(target=start_cat_list_parser, args=(parsing_list,), daemon=True)\n    clothing_thread.start()\n    clothing_thread.join()",
+        "detail": "start_parser",
+        "documentation": {}
+    }
+]

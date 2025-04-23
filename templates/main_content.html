@@ -2,65 +2,139 @@
 
 {% block content %}
 {% set products_db = Database("db/products.db") %}
+{% set favourites_list = [] %}
+{% if current_user.is_authenticated and current_user.favourites %}
+  {% set favourites_list = current_user.favourites.strip().split(";")[:-1]|map('int')|list %}
+{% endif %}
 
-<!-- Кнопка для открытия панели -->
-<button id="categoryButton" class="btn btn-primary">Категории</button>
-
-<!-- Выезжающее окно -->
+<!-- Постоянная боковая панель категорий -->
 <div id="categoryPanel" class="category-panel">
+  <div class="category-panel-header">
+    <h3>Категории товаров</h3>
     <button id="closePanelButton" class="close-button">&times;</button>
-    <div class="category-content">
-        <!-- Динамическая вставка категорий -->
-        <ul class="category-list">
-            {% for cat, cat_name in products_db.get_unique_categories_and_names() %}
-                {% if cat_name %}
-                <li class="category-item">
-                    <a href="/{{ cat }}" class="category-link">{{ cat_name }}</a>
-                </li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
+  </div>
+  <div class="category-content">
+    <ul class="category-list">
+      {% for cat, cat_name in products_db.get_unique_categories_and_names() %}
+        {% if cat_name %}
+        <li class="category-item">
+          <a href="/category/{{ cat }}" class="category-link">
+            <i class="fas fa-tag mr-2"></i>{{ cat_name }}
+          </a>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 
-
-<div class="row mt-4">
-    {% for product in products_db.get_all_products() %}
-    <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-            <img src="{{ product.image_url }}" class="card-img-top" alt="{{ product.name }}">
-            <div class="card-body">
-                <h5 class="card-title">{{ product.name }}</h5>
-                <p class="card-text">ID: {{ product.id }}</p>
-                <p class="card-text">Цена: {{ product.price|int }} руб.</p>
-                <p class="card-text">Скидка: {{ ((product.previous_price - product.price) / product.previous_price *
-                    100)|round|int }}%</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                        <a href="https://www.wildberries.ru/catalog/{{ product.id }}/detail.aspx"
-                           class="btn btn-sm btn-outline-secondary">Подробнее</a>
-                        <a href="{{ url_for('add_to_favourites', product_id=product.id) }}"
-                           class="btn btn-sm btn-outline-secondary">Добавить в избранное</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- Основной контент -->
+<div id="mainContentWrapper" class="main-content-wrapper">
+  <div class="main-container">
+    <!-- Заголовок страницы -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <button id="categoryButton" class="btn">
+        <i class="fas fa-th-list mr-2"></i> Категории
+      </button>
+      <h2 class="text-center page-title m-0 ml-4">Популярные товары со скидкой</h2>
+      <div style="width: 44px;"></div> <!-- Пустой элемент для выравнивания -->
     </div>
-    {% endfor %}
+
+    <!-- Панель сортировки -->
+    <div class="sorting-panel mb-4">
+      <label for="sortSelect" class="sort-label">Сортировать по:</label>
+      <div class="sort-select-wrapper">
+        <select id="sortSelect" class="sort-select" onchange="window.location = updateQueryParam(updateQueryParam(window.location.href, 'sort_by', this.value), 'reverse', '0')">
+          <option value="discount" {% if sort_by == 'discount' %}selected{% endif %}>Скидке</option>
+          <option value="name" {% if sort_by == 'name' %}selected{% endif %}>Названию</option>
+          <option value="price" {% if sort_by == 'price' %}selected{% endif %}>Цене</option>
+          <option value="date" {% if sort_by == 'date' %}selected{% endif %}>Дате добавления</option>
+        </select>
+        <div class="sort-select-arrow"><i class="fas fa-chevron-down"></i></div>
+      </div>
+      <button class="sort-direction-btn" onclick="window.location = updateQueryParam(window.location.href, 'reverse', {% if reverse_sort %}'0'{% else %}'1'{% endif %})">
+        <i class="fas {% if reverse_sort %}fa-sort-amount-up{% else %}fa-sort-amount-down{% endif %}"></i>
+      </button>
+    </div>
+
+    <!-- Карточки товаров -->
+    <div class="row mt-4">
+      {% for product in products_db.get_all_products_sorted(sort_by, reverse_sort) %}
+      <div class="product-card card-wrapper mb-4">
+        <div class="card h-100">
+          {% if product.previous_price > product.price %}
+          <div class="discount-badge">
+            -{{ ((product.previous_price - product.price) / product.previous_price * 100)|round|int }}%
+          </div>
+          {% endif %}
+          <div class="card-img-container">
+            <img src="{{ product.image_url }}" class="card-img-top" alt="{{ product.name }}">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <div class="product-info">
+              <div class="product-id text-muted small">ID: {{ product.id }}</div>
+              <div class="card-price mt-2">
+                <span class="current-price">{{ product.price|int }} ₽</span>
+                {% if product.previous_price > product.price %}
+                <span class="previous-price">{{ product.previous_price|int }} ₽</span>
+                {% endif %}
+              </div>
+            </div>
+            <div class="btn-group mt-auto">
+              <a href="https://www.wildberries.ru/catalog/{{ product.id }}/detail.aspx" 
+                class="btn btn-outline-secondary" target="_blank">
+                <i class="fas fa-external-link-alt mr-1"></i> Подробнее
+              </a>
+              {% if product.id|string in favourites_list|map('string')|list %}
+              <a href="#" 
+                class="btn btn-outline-secondary favorite-btn active"
+                data-product-id="{{ product.id }}"
+                data-authenticated="{{ current_user.is_authenticated }}">
+                <i class="fas fa-heart mr-1" style="font-size: 0.9em;"></i> <span style="font-size: 0.9em;">Уже в избранном</span>
+              </a>
+              {% else %}
+              <a href="#" 
+                class="btn btn-outline-secondary favorite-btn"
+                data-product-id="{{ product.id }}"
+                data-authenticated="{{ current_user.is_authenticated }}">
+                <i class="far fa-heart mr-1"></i> В избранное
+              </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
 <script>
+  // Скрипт для управления категориями на мобильных устройствах
+  document.addEventListener('DOMContentLoaded', function() {
     const categoryButton = document.getElementById('categoryButton');
     const categoryPanel = document.getElementById('categoryPanel');
     const closePanelButton = document.getElementById('closePanelButton');
-
-    categoryButton.addEventListener('click', () => {
-        categoryPanel.classList.add('open');
+    
+    // Обработчики нажатий
+    categoryButton.addEventListener('click', function() {
+      categoryPanel.classList.add('open');
     });
-
-    closePanelButton.addEventListener('click', () => {
+    
+    closePanelButton.addEventListener('click', function() {
+      categoryPanel.classList.remove('open');
+    });
+    
+    // Закрыть панель при клике вне её
+    document.addEventListener('click', function(event) {
+      if (categoryPanel.classList.contains('open') && 
+          !categoryPanel.contains(event.target) && 
+          !categoryButton.contains(event.target)) {
         categoryPanel.classList.remove('open');
+      }
     });
+  });
 </script>
 
 {% endblock %}

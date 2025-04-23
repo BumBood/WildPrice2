@@ -117,7 +117,7 @@ def category_parser(name, shard, query):
                         if latest_price:
                             sale = get_sale(latest_price, item_info.salePriceU)
 
-                            if sale >= 0.2:
+                            if sale >= 0.15:
 
                                 check = db.add(item_info.id, item_info.name, item_info.salePriceU, latest_price,
                                                get_image_url(get_url(item_info.id)), query, name)
@@ -128,6 +128,7 @@ def category_parser(name, shard, query):
                                     db.update_price(item_info.id, item_info.salePriceU)
                                     db.update_previous_price(item_info.id, latest_price)
 
+                                return
                             elif db.get_price_from_id(item_info.id):
                                 db.delete_product_by_id(item_info.id)
 
