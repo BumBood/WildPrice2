@@ -137,6 +137,8 @@ def category_parser(name, shard, query):
                     page += 1
                 else:
                     break
+            except json.JSONDecodeError:
+                pass
             except Exception as e:
                 print(e.__class__.__name__, e)
         print([name, shard, query], "закончило работу")
