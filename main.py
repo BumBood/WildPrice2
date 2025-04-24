@@ -313,4 +313,4 @@ def catch_all_category(path):
 
 if __name__ == "__main__":
     db_session.global_init("db/users.db")
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)
