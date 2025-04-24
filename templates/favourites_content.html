@@ -25,12 +25,11 @@
 <!-- Основной контент -->
 <div id="mainContentWrapper" class="main-content-wrapper">
   <div class="main-container">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <div></div>
-      <h2 class="m-0 page-title"><i class="fas fa-heart mr-2"></i>Избранное</h2>
-      <a href="/" class="btn">
+    <div class="favorites-header position-relative mb-4">
+      <a href="/" class="btn return-btn position-absolute">
         <i class="fas fa-arrow-left mr-2"></i>Вернуться на главную
       </a>
+      <h2 class="m-0 page-title text-center"><i class="fas fa-heart mr-2"></i>Избранное</h2>
     </div>
     
     {% with messages = get_flashed_messages() %}
@@ -118,6 +117,9 @@
 </div>
 
 <script>
+  // Добавляем класс к body для специфичных стилей
+  document.body.classList.add('favourites-page');
+  
   // Скрипт для управления панелью категорий 
   document.addEventListener('DOMContentLoaded', function() {
     const categoryPanel = document.getElementById('categoryPanel');
@@ -135,6 +137,21 @@
         categoryPanel.classList.remove('open');
       }
     });
+    
+    // Адаптация для мобильной версии
+    function adjustForMobile() {
+      if (window.innerWidth <= 768) {
+        // Мобильная версия
+      } else {
+        // Десктопная версия - больше ничего не делаем
+      }
+    }
+    
+    // Запускаем адаптацию при загрузке страницы
+    adjustForMobile();
+    
+    // Запускаем адаптацию при изменении размера окна
+    window.addEventListener('resize', adjustForMobile);
   });
 </script>
 

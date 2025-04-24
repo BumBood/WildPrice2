@@ -157,15 +157,57 @@
       }
     });
     
-    // Обновлять видимость при изменении размера окна
-    window.addEventListener('resize', function() {
+    // Адаптация для мобильной версии
+    function adjustForMobile() {
       if (window.innerWidth <= 768) {
+        // Показываем кнопку категорий на мобильных
         categoryButton.classList.remove('d-none', 'd-md-none');
+        
+        // Настраиваем стили для мобильной версии
+        const headerContainer = document.querySelector('.category-header');
+        if (headerContainer) {
+          const flexContainer = headerContainer.querySelector('.d-flex');
+          if (flexContainer) {
+            flexContainer.style.flexDirection = 'column';
+            flexContainer.style.alignItems = 'center';
+          }
+          
+          // Центрируем заголовок
+          const categoryTitle = headerContainer.querySelector('.category-title');
+          if (categoryTitle) {
+            categoryTitle.style.textAlign = 'center';
+            categoryTitle.style.margin = '10px 0';
+          }
+        }
       } else {
+        // Скрываем кнопку категорий на десктопе
         categoryButton.classList.add('d-none', 'd-md-none');
         categoryPanel.classList.remove('open');
+        
+        // Возвращаем обычный вид для десктопа
+        const headerContainer = document.querySelector('.category-header');
+        if (headerContainer) {
+          const flexContainer = headerContainer.querySelector('.d-flex');
+          if (flexContainer) {
+            flexContainer.style.flexDirection = '';
+            flexContainer.style.alignItems = '';
+          }
+          
+          // Сбрасываем стили заголовка
+          const categoryTitle = headerContainer.querySelector('.category-title');
+          if (categoryTitle) {
+            categoryTitle.style.textAlign = '';
+            categoryTitle.style.margin = '';
+          }
+        }
       }
-    });
+    }
+    
+    // Запускаем адаптацию при загрузке страницы
+    adjustForMobile();
+    
+    // Запускаем адаптацию при изменении размера окна
+    window.addEventListener('resize', adjustForMobile);
   });
 </script>
 

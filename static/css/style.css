@@ -549,7 +549,23 @@ body {
   .container {
     width: 100%;
     padding: 0 10px;
-    margin-top: 80px;
+    margin-top: 120px;
+  }
+  
+  /* Центрирование элементов в навбаре для мобильной версии */
+  .navbar .container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar-brand {
+    margin-bottom: 5px;
+  }
+  
+  .navbar .ml-auto {
+    margin-left: 0 !important;
   }
   
   /* На мобильных делаем панель категорий выдвижной */
@@ -560,15 +576,16 @@ body {
     left: -80%;
     top: 0;
     padding-top: 3.5rem;
-    transition: left 0.3s ease;
+    transition: all 0.3s ease;
     z-index: 1050;
     box-shadow: 2px 0 15px rgba(0, 0, 0, 0.2);
-    transform: translateX(-100%);
-    margin-top: 69px;
+    transform: none;
+    margin-top: 120px;
   }
   
   .category-panel.open {
     left: 0;
+    transform: none;
   }
   
   /* Показываем кнопку открытия меню на мобильных */
@@ -609,11 +626,28 @@ body {
   .main-content-wrapper {
     width: 100%;
     margin-left: 0;
-    margin-top: 80px;
+    margin-top: 120px;
   }
   
   .main-container {
     padding: 0.5rem;
+    padding-top: 1rem;
+  }
+  
+  .return-btn {
+    position: static !important;
+    transform: none;
+    display: block;
+    margin: 0 auto 15px;
+  }
+  
+  body.favourites-page .category-panel {
+    display: block;
+  }
+  
+  body.favourites-page .main-content-wrapper {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -917,15 +951,74 @@ a:hover {
 /* Адаптивность для сортировки на мобильных устройствах */
 @media (max-width: 576px) {
   .sorting-panel {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   
   .sort-label {
-    margin-bottom: 8px;
+    margin-bottom: 0;
+    margin-right: 10px;
   }
   
   .sort-select-wrapper {
+    flex: 1;
+    min-width: 120px;
+  }
+  
+  .sort-direction-btn {
+    margin-left: 10px;
+  }
+}
+
+/* Скрытие панели категорий на странице избранного (только десктоп) */
+body.favourites-page .category-panel {
+  display: none;
+}
+
+body.favourites-page .main-content-wrapper {
+  width: 100%;
+  margin-left: 0;
+}
+
+body.favourites-page .page-title {
+  margin-bottom: 0 !important;
+}
+
+/* Стили для заголовка на странице избранного */
+.favorites-header {
+  position: relative;
+  padding: 10px 0;
+}
+
+.favorites-header .page-title {
+  display: block;
+  width: 100%;
+}
+
+.return-btn {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+/* Медиа-запрос для мобильной версии */
+@media (max-width: 768px) {
+  .return-btn {
+    position: static !important;
+    transform: none;
+    display: block;
+    margin: 0 auto 15px;
+  }
+  
+  body.favourites-page .category-panel {
+    display: block;
+  }
+  
+  body.favourites-page .main-content-wrapper {
     width: 100%;
+    margin-left: 0;
   }
 }

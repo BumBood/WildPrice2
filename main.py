@@ -75,12 +75,12 @@ def favourites():  # Страница с избранными
     if current_user.is_authenticated:
         db_sess = db_session.create_session()
         user = db_sess.query(User).get(current_user.id)
-
-        favourites = list(
-            map(lambda x: int(x), user.favourites.strip().split(";")[:-1])
-        )  # получаем список избранных товаров
-        if len(favourites) == 0:
-            flash("У вас нет избранных! ")
+        if user.favourites:
+            favourites = list(
+                map(lambda x: int(x), user.favourites.strip().split(";")[:-1])
+            )  # получаем список избранных товаров
+        else:
+            favourites = []
 
         products_db = Database("db/products.db")
 

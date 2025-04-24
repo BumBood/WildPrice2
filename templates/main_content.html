@@ -134,6 +134,55 @@
         categoryPanel.classList.remove('open');
       }
     });
+    
+    // Адаптация для мобильной версии
+    function adjustForMobile() {
+      if (window.innerWidth <= 768) {
+        // Центрирование кнопки категорий и заголовка на мобильных
+        const headerContainer = document.querySelector('.d-flex.justify-content-between');
+        if (headerContainer) {
+          headerContainer.style.flexDirection = 'column';
+          headerContainer.style.alignItems = 'center';
+          
+          // Убираем пустой элемент для выравнивания на мобильных
+          const emptyElement = headerContainer.querySelector('div[style="width: 44px;"]');
+          if (emptyElement) {
+            emptyElement.style.display = 'none';
+          }
+          
+          // Центрируем заголовок
+          const pageTitle = headerContainer.querySelector('.page-title');
+          if (pageTitle) {
+            pageTitle.style.margin = '10px 0';
+          }
+        }
+      } else {
+        // Возвращаем обычный вид для десктопа
+        const headerContainer = document.querySelector('.d-flex.justify-content-between');
+        if (headerContainer) {
+          headerContainer.style.flexDirection = '';
+          headerContainer.style.alignItems = '';
+          
+          // Возвращаем пустой элемент для выравнивания
+          const emptyElement = headerContainer.querySelector('div[style="width: 44px;"]');
+          if (emptyElement) {
+            emptyElement.style.display = '';
+          }
+          
+          // Сбрасываем стили заголовка
+          const pageTitle = headerContainer.querySelector('.page-title');
+          if (pageTitle) {
+            pageTitle.style.margin = '';
+          }
+        }
+      }
+    }
+    
+    // Запускаем адаптацию при загрузке страницы
+    adjustForMobile();
+    
+    // Запускаем адаптацию при изменении размера окна
+    window.addEventListener('resize', adjustForMobile);
   });
 </script>
 
