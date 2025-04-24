@@ -201,12 +201,28 @@ def show_category(category_id):
 
     products_db = Database("db/products.db")
 
-
     # Получаем все товары с указанной категорией
     all_products = products_db.get_all_products_sorted(sort_by, reverse_sort)
-    category_name = all_products[0].cat_name
+
+    # Фильтруем товары категории
     category_products = [p for p in all_products if int(p.cat[4:]) == category_id]
     has_products = len(category_products) > 0
+
+    # Получаем название категории из товаров категории, а не из всех товаров
+    category_name = None
+    if has_products:
+        category_name = category_products[0].cat_name
+    else:
+        # Если товаров в категории нет, получаем название напрямую
+        unique_categories = products_db.get_unique_categories_and_names()
+        for cat, cat_name in unique_categories:
+            if int(cat[4:]) == category_id:
+                category_name = cat_name
+                break
+
+    # Если не удалось получить имя категории, используем "Категория" как запасной вариант
+    if not category_name:
+        category_name = "Категория"
 
     return render_template(
         "category.html",

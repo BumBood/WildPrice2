@@ -1,3 +1,4 @@
+from json import JSONDecodeError
 from time import sleep
 
 import requests
@@ -31,7 +32,6 @@ def get_latest_price(art: int) -> int:
 
         return latest_price
     except Exception as e:
-        print(e.__class__.__name__, e)
         return None
 
 
@@ -137,13 +137,11 @@ def category_parser(name, shard, query):
                     page += 1
                 else:
                     break
-            except json.JSONDecodeError:
-                pass
             except Exception as e:
                 print(e.__class__.__name__, e)
         print([name, shard, query], "закончило работу")
         return 1
 
     except Exception as e:
-        print(e)
+        print(e.__class__.__name__, e)
         category_parser(name, shard, query)

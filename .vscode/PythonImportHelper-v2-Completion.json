@@ -470,6 +470,23 @@
         "documentation": {}
     },
     {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "JSONDecodeError",
+        "importPath": "json",
+        "description": "json",
+        "isExtraImport": true,
+        "detail": "json",
+        "documentation": {}
+    },
+    {
         "label": "sleep",
         "importPath": "time",
         "description": "time",
@@ -516,15 +533,6 @@
         "description": "parser.model",
         "isExtraImport": true,
         "detail": "parser.model",
-        "documentation": {}
-    },
-    {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
         "documentation": {}
     },
     {
@@ -918,7 +926,7 @@
         "kind": 6,
         "importPath": "parser.model",
         "description": "parser.model",
-        "peekOfCode": "class DBItem(BaseModel):\n    id: int\n    name: str\n    salePriceU: float\n    @field_validator('salePriceU')\n    def convert_sale_price(cls, sale_price: int) -> float:\n        if sale_price is not None:\n            return sale_price / 100",
+        "peekOfCode": "class DBItem(BaseModel):\n    id: int\n    name: str\n    salePriceU: float\n    @field_validator(\"salePriceU\")\n    def convert_sale_price(cls, sale_price: int) -> float:\n        if sale_price is not None:\n            return sale_price / 100",
         "detail": "parser.model",
         "documentation": {}
     },
@@ -927,7 +935,7 @@
         "kind": 5,
         "importPath": "parser.model",
         "description": "parser.model",
-        "peekOfCode": "parsing_list = [['Блузки и рубашки', 'bl_shirts', 'cat=8126'], ['Брюки', 'pants', 'cat=8127'],\n                ['Верхняя одежда', 'outwear1', 'cat=63010'],\n                ['Джемперы, водолазки и кардиганы', 'jumpers_cardigans', 'cat=8130'], ['Джинсы', 'jeans', 'cat=8131'],\n                ['Комбинезоны', 'overalls', 'cat=8133'], ['Костюмы', 'costumes', 'cat=8134'],\n                ['Лонгсливы', 'sweatshirts_hoodies', 'cat=9411'],\n                ['Пиджаки, жилеты и жакеты', 'blazers_wamuses', 'cat=8136'],\n                ['Платья и сарафаны', 'dresses', 'cat=8137'],\n                ['Толстовки, свитшоты и худи', 'sweatshirts_hoodies', 'cat=8140'],\n                ['Туники', 'sweatshirts_hoodies', 'cat=8141'], ['Футболки и топы', 'tops_tshirts1', 'cat=8142'],\n                ['Халаты', 'women_bathrobes', 'cat=128996'], ['Шорты', 'shorts', 'cat=10567'],",
+        "peekOfCode": "parsing_list = [\n    [\"Женские блузки и рубашки\", \"bl_shirts\", \"cat=8126\"],\n    [\"Женские брюки\", \"pants\", \"cat=8127\"],\n    [\"Женская верхняя одежда\", \"outwear1\", \"cat=63010\"],\n    [\"Женские джемперы, водолазки и кардиганы\", \"jumpers_cardigans\", \"cat=8130\"],\n    [\"Женские джинсы\", \"jeans\", \"cat=8131\"],\n    [\"Женские комбинезоны\", \"overalls\", \"cat=8133\"],\n    [\"Женские костюмы\", \"costumes\", \"cat=8134\"],\n    [\"Женские лонгсливы\", \"sweatshirts_hoodies\", \"cat=9411\"],\n    [\"Женские пиджаки, жилеты и жакеты\", \"blazers_wamuses\", \"cat=8136\"],",
         "detail": "parser.model",
         "documentation": {}
     },
@@ -945,7 +953,7 @@
         "kind": 2,
         "importPath": "parser.wildberries_parser",
         "description": "parser.wildberries_parser",
-        "peekOfCode": "def get_latest_price(art: int) -> int:\n    try:\n        url = get_url(art) + \"info/price-history.json\"\n        prices_json = requests.get(url).json()\n        latest_price = list(map(lambda x: x[\"price\"][\"RUB\"] // 100, prices_json))[-1]\n        return latest_price\n    except Exception as e:\n        print(e.__class__.__name__, e)\n        return None\ndef get_url(art: int) -> str:",
+        "peekOfCode": "def get_latest_price(art: int) -> int:\n    try:\n        url = get_url(art) + \"info/price-history.json\"\n        prices_json = requests.get(url).json()\n        latest_price = list(map(lambda x: x[\"price\"][\"RUB\"] // 100, prices_json))[-1]\n        return latest_price\n    except Exception as e:\n        return None\ndef get_url(art: int) -> str:\n    art_str = str(art)",
         "detail": "parser.wildberries_parser",
         "documentation": {}
     },
